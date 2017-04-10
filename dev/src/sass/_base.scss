@@ -1,0 +1,209 @@
+// Get palette.
+$basePalette: get-palette('base');
+
+#app {
+    margin: 35px 15px 20px 15px;
+    width: 436px;
+}
+
+.wrap--content {
+    width: 100%;
+    position: relative;
+}
+
+.content--main {
+    $top--background: get-color('top--background', $basePalette);
+    background-color: $top--background;
+    padding: 25px 20px 25px 20px;
+}
+
+.form-group-from {
+
+    width: 130px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 0;
+
+    input {
+        margin-bottom: 10px;
+        border-radius: 0;
+    }
+
+}
+
+.select--from {
+    width: 100px;
+}
+
+.Select-control {
+    height: 30px;
+    border: none;
+    border-radius: 0;
+}
+
+.form-group-to {
+
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.btn-swap {
+    $btn--swap--background: get-color('btn--swap--background', $basePalette);
+    $btn--swap: get-color('btn--swap', $basePalette);
+    vertical-align: top;
+    margin-right: 10px;
+    background-color: $btn--swap--background;
+    color: $btn--swap;
+    border-radius: 0;
+}
+
+.btn-convert {
+    $btn--convert--background: get-color('btn--convert--background', $basePalette);
+    $btn-convert: get-color('btn-convert', $basePalette);
+    background-color: $btn--convert--background;
+    border-radius: 0;
+    color: $btn-convert;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.title {
+    $title: get-color('title', $basePalette);
+    $title--shadow: get-color('title--shadow', $basePalette);
+    position: absolute;
+    top: -31px;
+    margin: 0;
+    color: $title;
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-shadow: 1px 0px 2px $title--shadow;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.wrap--result {
+    text-align: right;
+    font-family: 'Roboto Slab', serif;
+    padding-right: 20px;
+}
+
+.result--from {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.result--to {
+    $text--result-to: get-color('text--result-to', $basePalette);
+    font-size: 40px;
+    color: $text--result-to;
+    margin: 0;
+    line-height: 45px;
+}
+
+.content--history {
+
+    $history--background: get-color('history--background', $basePalette);
+    $h--li--border: get-color('h--li--border', $basePalette);
+    $h--text-to: get-color('h--text-to', $basePalette);
+    $h--icon--delete: get-color('h--icon--delete', $basePalette);
+
+    background-color: $history--background;
+
+    ul {
+        padding-left: 0px;
+        list-style: none;
+        padding: 10px 20px 20px 20px;
+    }
+
+    li {
+        border-bottom: 1px dashed $h--li--border;
+        padding-top: 10px;
+        font-family: 'Roboto Slab', serif;
+        text-indent: 20px;
+        letter-spacing: 1px;
+        position: relative;
+    }
+
+    .to {
+        font-size: 20px;
+        color: $h--text-to;
+    }
+
+    .glyphicon-custom {
+        position: absolute;
+        right: 10px;
+        top: 19px;
+        cursor: pointer;
+        color: $h--icon--delete;
+    }
+
+    max-height: 0;
+    transition: max-height 0.20s ease-out;
+    overflow: hidden;
+
+}
+
+.content--history.open {
+    max-height: 500px;
+   transition: max-height 0.25s ease-in;
+}
+
+.btn-history {
+
+    $btn-h--open--background: get-color('btn-h--open--background', $basePalette);
+    $btn-h--open: get-color('btn-h--open', $basePalette);
+
+    border-radius: 4em;
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 0;
+    background-color:  $btn-h--open--background;
+    color: $btn-h--open;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+
+    &:after {
+        content: "\2212";
+        font-size: 21px;
+    }
+
+    &:focus, &:hover {
+        color: $btn-h--open;
+    }
+
+}
+
+button:focus {outline:0 !important;}
+
+.btn-history.closed-history {
+
+    $btn-h--close--background: get-color('btn-h--close--background', $basePalette);
+    $btn-h--close: get-color('btn-h--close', $basePalette);
+
+    background-color:  $btn-h--close--background;
+    color: $btn-h--close;
+
+    &:focus, &:hover {
+        color: $btn-h--close;
+    }
+
+    &:after {
+        content: "\002B";
+        font-size: 21px;
+        line-height: 20px;
+    }
+
+}

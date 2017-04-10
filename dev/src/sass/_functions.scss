@@ -1,0 +1,15 @@
+@function get-palette($label) {
+  @each $palet-name, $palet-colors in $colors {
+    @if $palet-name == $label {
+      @return $palet-colors;
+    }
+  }
+}
+
+@function get-color($label, $palet-colors) {
+  @each $color-name, $color in $palet-colors {
+    @if $color-name == $label {
+      @return $color;
+    }
+  }
+}

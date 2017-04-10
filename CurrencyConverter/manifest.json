@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+
+  "name": "Currency Converter",
+  "description": "Calculate live currency with this free currency converter.",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "cc-icon.png",
+   "default_popup": "index.html"
+  }
+}
